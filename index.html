@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Vacation Planner</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Multi-City Vacation Planner</h1>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h2></h2>
+          <form id="new-vacation">
+            <div class="form-group">
+              <label for="new-destination">Name of Destination</label>
+              <input type="text" class="form-control" id="new-destination">
+            </div>
+            <div class="form-group">
+              <label for="new-arrival">Arrival Date</label>
+              <input type="date" class="form-control" id="new-arrival">
+            </div>
+            <div class="form-group">
+              <label for="new-nights">Number of Nights</label>
+              <input type="number" class="form-control" id="new-nights">
+            </div>
+            <!-- <div class="form-group">
+              <label for="new-transport">Form of Transportation</label>
+              <select id="new-transport" class="form-control">
+                <option selected disabled>- Select One -</option>
+                <option value="plane">Airplane</option>
+                <option value="train">Train</option>
+                <option value="rental">Car Rental</option>
+                <option value="drive">Personal Car</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="new-transInfo">Transportation Information (e.g. Flight Number, Train Route, etc)</label>
+              <input type="text" class="form-control" id="new-transInfo">
+            </div> -->
+            <!-- <div class="form-group">
+              <label for="new-activity">Activities</label>
+              <input type="text" class="form-control" id="new-activity">
+            </div> -->
+
+            <button type="submit" class="btn">Add</button>
+          </form>
+
+          <h2>Your Vacation:</h2>
+          <ul id="cities">
+
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div id="show-city">
+            <h2></h2>
+
+            <p>Arrive: <span class="arrive-city"></span></p>
+            <p>On: <span class="arrive-date"></span></p>
+            <p>Number of Nights: <span class="nights"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
