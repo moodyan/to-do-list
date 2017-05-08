@@ -5,11 +5,11 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Vacation Planner</title>
+    <title>Trip Planner</title>
   </head>
   <body>
     <div class="container">
-      <h1>Multi-City Vacation Planner</h1>
+      <h1>Multi-City Trip Planner</h1>
 
       <div class="row">
         <div class="col-md-6">
@@ -24,28 +24,22 @@
               <input type="date" class="form-control" id="new-arrival">
             </div>
             <div class="form-group">
-              <label for="new-nights">Number of Nights</label>
-              <input type="number" class="form-control" id="new-nights">
-            </div>
-            <!-- <div class="form-group">
-              <label for="new-transport">Form of Transportation</label>
-              <select id="new-transport" class="form-control">
-                <option selected disabled>- Select One -</option>
-                <option value="plane">Airplane</option>
-                <option value="train">Train</option>
-                <option value="rental">Car Rental</option>
-                <option value="drive">Personal Car</option>
-                <option value="other">Other</option>
-              </select>
+              <label for="new-departure">Departure Date</label>
+              <input type="date" class="form-control" id="new-departure">
             </div>
             <div class="form-group">
-              <label for="new-transInfo">Transportation Information (e.g. Flight Number, Train Route, etc)</label>
-              <input type="text" class="form-control" id="new-transInfo">
-            </div> -->
-            <!-- <div class="form-group">
-              <label for="new-activity">Activities</label>
+              <label for="new-transport">Transportation Information (e.g. Airline & Flight Number, Train Route, etc)</label>
+              <input type="text" class="form-control" id="new-transport">
+            </div>
+            <div class="form-group">
+              <label for="new-activities">Activities</label>
               <input type="text" class="form-control" id="new-activity">
-            </div> -->
+              <!-- <input type="text" class="form-control" id="new-activity2">
+              <input type="text" class="form-control" id="new-activity3">
+              <input type="text" class="form-control" id="new-activity4">
+              <input type="text" class="form-control" id="new-activity5">
+              <input type="text" class="form-control" id="new-activity6"> -->
+            </div>
 
             <button type="submit" class="btn">Add</button>
           </form>
@@ -59,9 +53,10 @@
           <div id="show-city">
             <h2></h2>
 
-            <p>Arrive: <span class="arrive-city"></span></p>
-            <p>On: <span class="arrive-date"></span></p>
-            <p>Number of Nights: <span class="nights"></span></p>
+            <p>Arrive to <span class="arrive-city"></span> on:  <span class="arrive-date"></span></p>
+            <p>Depart on: <span class="departure-date"></span></p>
+            <p>Transportation Info: <span class="transport-info"></span></p>
+            <p>Things to do: <span class="activities"></span></p>
           </div>
         </div>
       </div>

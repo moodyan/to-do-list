@@ -1,8 +1,11 @@
 //business logic
-function City(destination, arrive, nights) {
+function City(destination, arrive, depart, transport, activities) {
   this.destination = destination;
-  this.arrivalDate = arrive;
-  this.nights = nights;
+  this.arrive = arrive;
+  this.depart = depart;
+  this.transport = transport;
+  this.activities = activities;
+
 }
 
 // City.prototype.itinerary = function() {
@@ -16,9 +19,11 @@ $(document).ready(function() {
 debugger;
     var destinationInput = $("input#new-destination").val();
     var arrivalDateInput = $("input#new-arrival").val();
-    var stayLengthInput = $("input#new-nights").val();
+    var departureDateInput = $("input#new-departure").val();
+    var transportInput = $("input#new-transport").val();
+    var activityInput = $("input#new-activity").val();
 
-    var newCity = new City(destinationInput, arrivalDateInput, stayLengthInput);
+    var newCity = new City(destinationInput, arrivalDateInput, departureDateInput, transportInput, activityInput);
 
     $("ul#cities").append("<li><span class='city'>" + destinationInput + "</span></li>");
 
@@ -26,13 +31,17 @@ debugger;
       $("#show-city").show();
       $("#show-city h2").text(newCity.destination);
       $(".arrive-city").text(newCity.destination);
-      $(".arrive-date").text(newCity.arrivalDate);
-      $(".nights").text(newCity.nights);
+      $(".arrive-date").text(newCity.arrive);
+      $(".departure-date").text(newCity.depart);
+      $(".transport-info").text(newCity.transport);
+      $(".activities").text(newCity.activities);
 
     });
 
     $("input#new-destination").val("");
     $("input#new-arrival").val("");
-    $("input#new-nights").val("");
+    $("input#new-departure").val("");
+    $("input#new-transport").val("");
+    $("input#new-activity").val("");
   });
 });
